@@ -24,13 +24,11 @@ _empty=$(printf "%${_left}s")
 # 1.2.1 Output example:
 # 1.2.1.1 Progress : [########################################] 100%
 printf "\rProgress : [${_fill// /=}>${_empty// /#}] ${_progress}%%"
+
 }
 
-function exno {
-    $1 > /dev/null
-}
 
-exno "wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide/tarball/master"
+wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide/tarball/master
 
 
 
