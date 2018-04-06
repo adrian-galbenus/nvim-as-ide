@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+
+if [ -z "$NVIMIDE_HOME"  ]; then
+    NVIMIDE_HOME="$HOME/.nvimide"
+fi
+
+mkdir $NVIMIDE_HOME
+pushd $NVIMIDE_HOME
+wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide
+
+
 # 1. Create ProgressBar function
 # 1.1 Input is currentState($1) and totalState($2)
 function ProgressBar {
@@ -31,3 +41,5 @@ sleep 2
 ProgressBar 30 100
 sleep 2
 ProgressBar 100 100
+
+popd
