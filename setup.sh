@@ -7,7 +7,7 @@ fi
 
 mkdir $NVIMIDE_HOME
 pushd $NVIMIDE_HOME
-wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide
+wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide/tarball/master
 
 
 # 1. Create ProgressBar function
