@@ -5,8 +5,8 @@ if [ -z "$NVIMIDE_HOME"  ]; then
     NVIMIDE_HOME="$HOME/.nvimide"
 fi
 
-mkdir $NVIMIDE_HOME
-pushd $NVIMIDE_HOME
+mkdir $NVIMIDE_HOME > /dev/null
+pushd $NVIMIDE_HOME > /dev/null
 
 
 # 1. Create ProgressBar function
@@ -28,7 +28,7 @@ printf "\rProgress : [${_fill// /=}>${_empty// /#}] ${_progress}%%"
 }
 
 
-wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide/tarball/master
+wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide/tarball/master > /dev/null
 
 
 
@@ -45,6 +45,6 @@ ProgressBar 30 100
 sleep 2
 ProgressBar 100 100
 
-popd
+popd > /dev/null
 
 
