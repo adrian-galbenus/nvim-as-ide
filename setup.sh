@@ -7,24 +7,6 @@ fi
 
 mkdir $NVIMIDE_HOME
 pushd $NVIMIDE_HOME
-exno "wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide/tarball/master"
-
-
-
-# Variables
-_start=1
-
-# This accounts as the "totalState" variable for the ProgressBar function
-_end=100
-
-
-ProgressBar 4 100
-sleep 2
-ProgressBar 30 100
-sleep 2
-ProgressBar 100 100
-
-popd
 
 
 # 1. Create ProgressBar function
@@ -47,3 +29,24 @@ printf "\rProgress : [${_fill// /=}>${_empty// /#}] ${_progress}%%"
 function exno {
     $1 > /dev/null
 }
+
+exno "wget --no-check-certificate --content-disposition https://github.com/adrian-galbenus/nvim-as-ide/tarball/master"
+
+
+
+# Variables
+_start=1
+
+# This accounts as the "totalState" variable for the ProgressBar function
+_end=100
+
+
+ProgressBar 4 100
+sleep 2
+ProgressBar 30 100
+sleep 2
+ProgressBar 100 100
+
+popd
+
+
